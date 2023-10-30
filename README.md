@@ -50,30 +50,30 @@
 
 
 ### Introdução
-#### Introduzir o tema do trabalho e explicar a importância da Qualidade de Software na indústria de desenvolvimento de software.
-#### Apresentar o objetivo do trabalho, que é explorar a ferramenta Selenium na aplicação SpringBootApp Hotel para animais.
+- Introduzir o tema do trabalho e explicar a importância da Qualidade de Software na indústria de desenvolvimento de software.
+- Apresentar o objetivo do trabalho, que é explorar a ferramenta Selenium na aplicação SpringBootApp Hotel para animais.
 
 
 ### Ferramenta Selenium
-#### Introdução detalhada à ferramenta Selenium. Explicar o que é, a sua importância na automação de testes e as suas principais características.
-#### Descrever os conceitos-chave relacionados à automação de testes, como seletores, testes de caixa preta, e estratégias de automação.
+- Introdução detalhada à ferramenta Selenium. Explicar o que é, a sua importância na automação de testes e as suas principais características.
+- Descrever os conceitos-chave relacionados à automação de testes, como seletores, testes de caixa preta, e estratégias de automação.
 
 
 ### Aplicação SpringBootApp Hotel para Animais
-#### Apresentar a aplicação SpringBootApp Hotel para animais. Explicar o seu propósito, as funcionalidades e o público-alvo.
-#### Descrever os principais desafios ou áreas críticas de qualidade que podem ser melhorados com automação de testes.
+- Apresentar a aplicação SpringBootApp Hotel para animais. Explicar o seu propósito, as funcionalidades e o público-alvo.
+- Descrever os principais desafios ou áreas críticas de qualidade que podem ser melhorados com automação de testes.
 
 
 ###  Cenários de Teste e a sua Implementação com Selenium
-#### Detalhar o processo de implementação dos cenários de teste com o Selenium.
-#### Fornecer código de exemplo, scripts ou pseudocódigos para demonstrar como os testes foram automatizados.
+- Detalhar o processo de implementação dos cenários de teste com o Selenium.
+- Fornecer código de exemplo, scripts ou pseudocódigos para demonstrar como os testes foram automatizados.
 
 
 ### Resultados e Evidências
-#### Apresentar os resultados dos testes realizados com o Selenium, incluindo capturas de tela ou registros de testes bem-sucedidos e falhas.
-#### Discutir os benefícios e desafios encontrados durante a implementação dos testes automatizados.
+- Apresentar os resultados dos testes realizados com o Selenium, incluindo capturas de tela ou registros de testes bem-sucedidos e falhas.
+- Discutir os benefícios e desafios encontrados durante a implementação dos testes automatizados.
 
 
 ### Discussão e Conclusão
-#### Analisar os resultados à luz dos conceitos das aulas T03 a T07.
-#### Concluir sobre a eficácia da automação de testes usando o Selenium na melhoria da qualidade de software da aplicação SpringBootApp Hotel para animais.
+- Analisar os resultados à luz dos conceitos das aulas T03 a T07.
+- Concluir sobre a eficácia da automação de testes usando o Selenium na melhoria da qualidade de software da aplicação SpringBootApp Hotel para animais.
