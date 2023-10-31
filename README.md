@@ -14,10 +14,10 @@
 - Automatize o teste de seleção de perfil de usuário. Certifique-se de que os perfis de "Hotel Administrator" e "Customer" funcionem corretamente.
 
 ## Teste de Gerenciamento de Clientes
-- Automatize testes para:
-  - Registro de novos clientes.
-  - Visualização de informações de clientes.
-  - Atualização de detalhes de clientes.
+- Automatizar testes para:
+  - Registo de um cliente.
+  - Visualização de informações desse cliente.
+  - Atualização de detalhes do cliente.
   - Exclusão de clientes.
 
 ## Teste de Gerenciamento de Animais
