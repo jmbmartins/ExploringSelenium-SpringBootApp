@@ -16,8 +16,7 @@
 ## Teste de Gerenciamento de Clientes
 - Automatizar testes para:
   - Registo de um cliente.
-  - Visualização de informações desse cliente.
-  - Atualização de detalhes do cliente.
+  - Atualização de detalhes de um cliente.
   - Exclusão de clientes.
 
 ## Teste de Gerenciamento de Animais
