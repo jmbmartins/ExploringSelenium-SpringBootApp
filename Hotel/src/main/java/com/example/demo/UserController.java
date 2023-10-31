@@ -54,9 +54,10 @@ public class UserController {
     }
 
     @PostMapping("/registersave")
-    public String registerUser(@ModelAttribute("user") User user) {
+    public String registerUser(@ModelAttribute("user") User user, HttpSession session) {
         userRepository.save(user);
-        return "redirect:/login";
+        session.setAttribute("client", user);
+        return "redirect:/mainpageclient";
     }
 
     @GetMapping("/login")
