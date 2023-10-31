@@ -10,20 +10,17 @@ driver = webdriver.Chrome()
 driver.get('http://localhost:8080/')
 
 
+# Test 1: Create a New Client
 def register_client():
-    # Test 1: Create a New Client
     try:
-        # Voltar para a página de login
+
         driver.get('http://localhost:8080/')
 
-        # Encontrar o botão de registo
         btnRegister = driver.find_element(By.ID, 'btnregister')
         btnRegister.click()
 
-        # Esperar pela página de destino após o login (você pode adicionar uma espera explícita)
         driver.implicitly_wait(10)
 
-        # Preencher e enviar o formulário de login com credenciais de cliente
         email_input = driver.find_element(By.NAME, 'email')
         password_input = driver.find_element(By.NAME, 'password')
         login_button = driver.find_element(By.ID, 'btnSub')
@@ -32,81 +29,68 @@ def register_client():
         password_input.send_keys('password3')
         login_button.click()
 
-        # Esperar por 2 segundos
         time.sleep(2)
 
-        # Esperar pela página de destino após o login (você pode adicionar uma espera explícita)
         driver.implicitly_wait(10)
 
-        # Verificar o texto no elemento com id "pagetitle"
         pagetitle_element = driver.find_element(By.ID, 'pagetitle')
         text = pagetitle_element.text
 
-        # Verificar se o texto está correto
         assert "Welcome to Pet's Hotel," in text
 
         print("Teste de registo do cliente foi bem-sucedido!")
     except Exception as e:
-        print("Teste de registo do cliente falhou:", str(e))
+        print("Test new client register:", str(e))
 
 
-'''
-# Step 2: Register a new customer
-def register_new_customer():
-    driver.get("http://yourwebsite.com/homepage")  # Navigate to the homepage
-    new_client_link = driver.find_element_by_link_text("Add Pet")
-    new_client_link.click()
-
-    name_input = driver.find_element_by_name("name")
-    address_input = driver.find_element_by_name("address")
-    phone_input = driver.find_element_by_name("phone")
-    insert_button = driver.find_element_by_xpath("//button[@type='submit']")
-
-    name_input.send_keys("New Customer Name")
-    address_input.send_keys("123 Main St")
-    phone_input.send_keys("123-456-7890")
-    insert_button.click()
-
-
-# Step 3: View customer information
-def view_customer_information():
-    driver.get("http://yourwebsite.com/homepage")  # Navigate to the homepage
-    customer_info_link = driver.find_element_by_link_text("Change Information")
-    customer_info_link.click()
-
-
-# Step 4: Update customer details
+# Test 2: (Need to Log in First) Update Customer Personal Details
 def update_customer_details():
-    driver.get("http://yourwebsite.com/homepage")  # Navigate to the homepage
-    update_link = driver.find_element_by_link_text("Update")
-    update_link.click()
+    try:
+        driver.get('http://localhost:8080/')
 
-    name_input = driver.find_element_by_name("name")
-    address_input = driver.find_element_by_name("address")
-    phone_input = driver.find_element_by_name("phone")
-    update_button = driver.find_element_by_xpath("//button[@type='submit']")
+        email_input = driver.find_element(By.NAME, 'email')
+        password_input = driver.find_element(By.NAME, 'password')
+        login_button = driver.find_element(By.ID, 'btnSub')
 
-    name_input.clear()
-    name_input.send_keys("Updated Name")
-    address_input.clear()
-    address_input.send_keys("456 New St")
-    phone_input.clear()
-    phone_input.send_keys("987-654-3210")
-    update_button.click()
+        email_input.send_keys('user1@example.com')
+        password_input.send_keys('password1')
+        login_button.click()
 
+        time.sleep(2)
 
-# Step 5: Delete customer
-def delete_customer():
-    driver.get("http://yourwebsite.com/homepage")  # Navigate to the homepage
-    delete_link = driver.find_element_by_link_text("Delete")
-    delete_link.click()
-    # You may need to confirm the deletion through a confirmation dialog
-'''
+        driver.implicitly_wait(10)
+
+        btnUpdate = driver.find_element(By.CLASS_NAME, 'change-info-link')
+        btnUpdate.click()
+
+        name_input = driver.find_element(By.ID, "name")
+        name_input_mod = "John Does"
+        name_input.send_keys(name_input_mod)
+
+        adress_input = driver.find_element(By.ID, "add")
+        add_input_mod = "123 Main Sts"
+        adress_input.send_keys(add_input_mod)
+
+        phone_input = driver.find_element(By.ID, "phone")
+        phone_input_mod = "123-456-7891"
+        phone_input.send_keys(phone_input_mod)
+
+        btnSubmitChange= driver.find_element(By.ID, 'submit')
+        btnSubmitChange.click()
+
+        name_client_pos_change = driver.find_element(By.ID, "pageclient_name")
+        add_client_pos_change = driver.find_element(By.ID, "pageclient_add")
+        phone_client_pos_change = driver.find_element(By.ID, "pageclient_phone")
+
+        assert ((name_client_pos_change.text == name_input) and (add_client_pos_change.text == adress_input) and  (phone_client_pos_change.text == phone_input))
+    except Exception as e:
+        print("Test update client information failed:", str(e))
+
 
 # Main test scenario
 try:
-    register_client()
-    # register_new_customer()
+    # register_client()
+    update_customer_details()
     # view_customer_information()
     # update_customer_details()
     # delete_customer()

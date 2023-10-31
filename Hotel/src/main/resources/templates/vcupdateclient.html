@@ -52,12 +52,12 @@
   <form th:object="${client}" th:action="@{/vcsaveClient}" method="post">
     <input type="hidden" th:field="*{id}" />
     <label>Name:</label>
-    <input type="text" th:field="*{name}" required/><br/>
+    <input id = "name" type="text" th:field="*{name}" required/><br/>
     <label>Address:</label>
-    <input type="text" th:field="*{address}" required/><br/>
+    <input id = "add" type="text" th:field="*{address}" required/><br/>
     <label>Phone:</label>
-    <input type="text" th:field="*{phone}" required/><br/>
-    <button type="submit">Save</button>
+    <input id = "phone" type="text" th:field="*{phone}" required/><br/>
+    <button id = "submit" type="submit">Save</button>
 </form>
 
 

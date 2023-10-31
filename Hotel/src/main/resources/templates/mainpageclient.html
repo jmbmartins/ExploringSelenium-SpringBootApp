@@ -182,15 +182,15 @@ form button[type="submit"]:hover {
         <table>
             <tr>
                 <td>Name:</td>
-                <td th:text="${client.name}"></td>
+                <td id = "pageclient_name" th:text="${client.name}"></td>
             </tr>
             <tr>
                 <td>Address:</td>
-                <td th:text="${client.address}"></td>
+                <td id = "pageclient_add" th:text="${client.address}"></td>
             </tr>
             <tr>
                 <td>Phone:</td>
-                <td th:text="${client.phone}"></td>
+                <td id = "pageclient_phone" th:text="${client.phone}"></td>
             </tr>
         </table>
         <a class="change-info-link" th:href="@{/vcupdateclient/{id}(id=${client.id})}">Change Information</a>
