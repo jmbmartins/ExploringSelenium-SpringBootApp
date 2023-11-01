@@ -10,12 +10,12 @@
 - Associação de tipos de alimentação aos animais.
 - Geração de estatísticas e relatórios.
   
-## Teste de Perfil de Usuário
+## Teste de Perfil de Usuário (João) ✅
 - Automatize o teste de seleção de perfil de usuário. Certifique-se de que os perfis de "Hotel Administrator" e "Customer" funcionem corretamente.
 
-## Teste de Gerenciamento de Clientes
+## Teste de Gerenciamento de Clientes (João)
 - Automatizar testes para:
-  - Registo de um cliente.
+  - Registo de um cliente. ✅
   - Atualização de detalhes de um cliente.
   - Exclusão de clientes.
 
