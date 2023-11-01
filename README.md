@@ -13,9 +13,10 @@
 
 ## Teste de Gerenciamento de Clientes (João)
 - Automatizar testes para:
-  - Registo de um cliente. ✅
-  - Atualização de detalhes de um cliente.
-  - Exclusão de clientes.
+  - Registo de um cliente. ✅ 
+  - Inserir dados pessoais de um cliente. **Failed (UserID and Client_Id)**
+  - Atualização de detalhes de um cliente. ✅
+  - Exclusão de clientes. ✅ **Failed (UserID and Client_Id)**
 
 ## Teste de Gerenciamento de Animais
 - Automatize testes para:
@@ -29,11 +30,11 @@
   - Verificação da disponibilidade de quartos.
   - Atualização de detalhes de quartos.
 
-## Teste de Reservas e Alojamentos (João)
+## Teste de Reservas de Alojamento (João)
 - Automatize testes para:
-  - Criação de reservas para clientes e animais.
-  - Verificação de datas de check-in e check-out.
-  - Verificação da associação de quartos às reservas.
+  - Criação de reservas para animais.
+  - Eliminar determinada reserva.
+  - **Negative Test Cases**: Verificação de casos particulares (Marcar para uma data que já passou, a data de check-out é anterior à de check-in). 
 
 ## Teste de Alimentação
 - Automatize testes para:
