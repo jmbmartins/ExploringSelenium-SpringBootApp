@@ -13,9 +13,10 @@
 
 ## Teste de Gerenciamento de Clientes (João)
 - Automatizar testes para:
-  - Registo de um cliente. ✅
-  - Atualização de detalhes de um cliente.
-  - Exclusão de clientes.
+  - Registo de um cliente. ✅ 
+  - Inserir dados pessoais de um cliente. **Failed (UserID and Client_Id)**
+  - Atualização de detalhes de um cliente. ✅
+  - Exclusão de clientes. ✅ **Failed (UserID and Client_Id)**
 
 ## Teste de Gerenciamento de Animais
 - Automatize testes para:
