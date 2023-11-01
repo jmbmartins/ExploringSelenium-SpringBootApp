@@ -1,4 +1,4 @@
-# ExploringSelenium
+![image](https://github.com/jmbmartins/ExploringSelenium/assets/75367661/93275c06-db0b-4023-8a07-cd48028f6b0c)# ExploringSelenium
 
 ## Explorar o Selenium na aplicação do "Hotel para Animais" 
 
@@ -31,7 +31,7 @@
   - Verificação da disponibilidade de quartos.
   - Atualização de detalhes de quartos.
 
-## Teste de Reservas e Alojamentos
+## Teste de Reservas e Alojamentos (João)
 - Automatize testes para:
   - Criação de reservas para clientes e animais.
   - Verificação de datas de check-in e check-out.
