@@ -32,9 +32,9 @@
 
 ## Teste de Reservas de Alojamento (João)
 - Automatize testes para:
-  - Criação de reservas para clientes e animais.
-  - Verificação de datas de check-in e check-out.
-  - Verificação da associação de quartos às reservas.
+  - Criação de reservas para animais.
+  - Eliminar determinada reserva.
+  - [Negative Test Cases]: Verificação de casos particulares (Marcar para uma data que já passou, a data de check-out é anterior à de check-in). 
 
 ## Teste de Alimentação
 - Automatize testes para:
