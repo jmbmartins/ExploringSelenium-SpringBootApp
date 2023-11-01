@@ -203,12 +203,12 @@ form button[type="submit"]:hover {
         <!-- Add your form to create a new client here -->
         <form th:object="${new_client}" th:action="@{/vcsaveClient}" method="post">
             <label>Name:</label>
-            <input type="text" th:field="*{name}" required/><br/>
+            <input id = "new_name" type="text" th:field="*{name}" required/><br/>
             <label>Address:</label>
-            <input type="text" th:field="*{address}" required/><br/>
+            <input id = "new_address" type="text" th:field="*{address}" required/><br/>
             <label>Phone:</label>
-            <input type="text" th:field="*{phone}" required/><br/>
-            <button type="submit">Insert information</button>
+            <input id = "new_phone" type="text" th:field="*{phone}" required/><br/>
+            <button id="newclientinfobtnsub" type="submit">Insert information</button>
         </form>
     </div>
 
