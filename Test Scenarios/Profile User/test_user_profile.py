@@ -26,10 +26,10 @@ try:
 
     assert "Welcome to Hotel Management Page" in text
 
-    print("Teste de login como administrador bem-sucedido!")
+    print("Test login administrator succeeded!")
 
 except Exception as e:
-    print("Teste de login como administrador falhou:", str(e))
+    print("Test login administrator failed:", str(e))
 
 try:
     driver.get('http://localhost:8080/')
@@ -51,10 +51,10 @@ try:
 
     assert "Welcome to Pet's Hotel," in text
 
-    print("Teste de login como cliente bem-sucedido!")
+    print("Test login client succeeded!")
 
 except Exception as e:
-    print("Teste de login como cliente falhou:", str(e))
+    print("Test login client failed:", str(e))
 
 finally:
     driver.quit()

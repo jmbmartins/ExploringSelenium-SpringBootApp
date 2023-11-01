@@ -38,9 +38,9 @@ def register_client():
 
         assert "Welcome to Pet's Hotel," in text
 
-        print("Teste de registo do cliente foi bem-sucedido!")
+        print("Test new client register succeeded!")
     except Exception as e:
-        print("Test new client register:", str(e))
+        print("Test new client register failed:", str(e))
 
 
 # Test 2: (Need to Log in First) Update Customer Personal Details
@@ -64,25 +64,31 @@ def update_customer_details():
         btnUpdate.click()
 
         name_input = driver.find_element(By.ID, "name")
+        name_input.clear()
         name_input_mod = "John Does"
         name_input.send_keys(name_input_mod)
 
         adress_input = driver.find_element(By.ID, "add")
+        adress_input.clear()
         add_input_mod = "123 Main Sts"
         adress_input.send_keys(add_input_mod)
 
         phone_input = driver.find_element(By.ID, "phone")
+        phone_input.clear()
         phone_input_mod = "123-456-7891"
         phone_input.send_keys(phone_input_mod)
 
         btnSubmitChange= driver.find_element(By.ID, 'submit')
         btnSubmitChange.click()
 
+        time.sleep(2)
+
         name_client_pos_change = driver.find_element(By.ID, "pageclient_name")
         add_client_pos_change = driver.find_element(By.ID, "pageclient_add")
         phone_client_pos_change = driver.find_element(By.ID, "pageclient_phone")
 
-        assert ((name_client_pos_change.text == name_input) and (add_client_pos_change.text == adress_input) and  (phone_client_pos_change.text == phone_input))
+        assert ((name_client_pos_change.text == name_input_mod) and (add_client_pos_change.text == add_input_mod) and  (phone_client_pos_change.text == phone_input_mod))
+        print("Test update client information succeeded")
     except Exception as e:
         print("Test update client information failed:", str(e))
 
