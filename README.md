@@ -30,7 +30,7 @@
   - Verificação da disponibilidade de quartos.
   - Atualização de detalhes de quartos.
 
-## Teste de Reservas e Alojamentos (João)
+## Teste de Reservas de Alojamento (João)
 - Automatize testes para:
   - Criação de reservas para clientes e animais.
   - Verificação de datas de check-in e check-out.
