@@ -18,7 +18,7 @@
   - Atualização de detalhes de um cliente. ✅
   - Exclusão de clientes. ✅ **Failed (UserID and Client_Id)**
 
-## Teste de Gerenciamento de Animais
+## Teste de Gerenciamento de Animais (Vasco)
 - Automatize testes para:
   - Registro de animais com detalhes como nome, espécie, idade e raça.
   - Associação de animais a clientes.
@@ -36,7 +36,7 @@
   - Eliminar determinada reserva.
   - **Negative Test Cases**: Verificação de casos particulares (Marcar para uma data que já passou, a data de check-out é anterior à de check-in). 
 
-## Teste de Alimentação
+## Teste de Alimentação  (Vasco)
 - Automatize testes para:
   - Associação de tipos de alimentação a animais.
   - Criação de reservas com base no tipo de alimentação desejado.
