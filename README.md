@@ -24,7 +24,7 @@
   - Atualização de dados.✅
   - Exclusão de animais.✅
 
-## Teste de Gerenciamento de Quartos
+## Teste de Gerenciamento de Quartos (Rui)
 - Automatize testes para:
   - Registro de informações de quartos.
   - Verificação da disponibilidade de quartos.
@@ -41,7 +41,7 @@
   - Associação de tipos de alimentação a animais.
   - Criação de reservas com base no tipo de alimentação desejado.
 
-## Teste de Estatísticas e Relatórios
+## Teste de Estatísticas e Relatórios (Rui)
 - Automatize testes para gerar estatísticas e relatórios com base nas operações realizadas na aplicação.
 
 ## Estrutura do Relatório
