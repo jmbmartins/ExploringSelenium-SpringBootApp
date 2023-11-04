@@ -21,8 +21,6 @@
 ## Teste de Gerenciamento de Animais (Vasco)
 - Automatize testes para:
   - Registro de animais com detalhes como nome, espécie, idade e raça.✅
-  - Associação de animais a clientes.✅
-  - Verificação da correta associação de animais a clientes.✅
   - Atualização de dados.
   - Exclusão de animais.
 
