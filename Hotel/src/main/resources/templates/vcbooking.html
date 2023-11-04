@@ -152,7 +152,7 @@
         <tr th:if="${listLodgingsClient.isEmpty()}">
             <td colspan="5">No booking's registered</td>
         </tr>
-        <tr th:each="lodging : ${listLodgingsClient}">
+        <tr class="table_lod" th:each="lodging : ${listLodgingsClient}">
             <td th:text="${lodging.checkInDate}"></td>
             <td th:text="${lodging.checkOutDate}"></td>
             <td th:text="${lodging.room.type}"></td>

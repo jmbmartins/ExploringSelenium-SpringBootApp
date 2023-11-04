@@ -56,9 +56,9 @@ def make_reservation():
         check_out_date.send_keys(datetime.strptime(checkOutDate, "%Y-%m-%d").strftime("%d-%m-%Y"))
 
         pet_dropdown = Select(driver.find_element(By.ID, "petId"))
-        pet_dropdown.select_by_index(1)  # Replace with the desired pet name "Thor"
+        pet_dropdown.select_by_visible_text(petName)  # Replace with the desired pet name "Thor"
 
-        room_type_select = Select(driver.find_element(By.ID,"roomTypeSelect"))
+        room_type_select = Select(driver.find_element(By.ID, "roomTypeSelect"))
         room_type_select.select_by_value(roomType)  # Replace with your desired room type
 
         time.sleep(10)
@@ -68,40 +68,31 @@ def make_reservation():
         submit_button.click()
 
         time.sleep(10)
-        driver.implicitly_wait(1000)
+        driver.implicitly_wait(10)
 
         # Locate the table rows
-        table_rows = driver.find_elements(By.TAG_NAME, "tr")
+        table_rows = driver.find_elements(By.CLASS_NAME, "table_lod")
 
         # Flag to indicate whether the record is found
         record_found = False
 
         # Iterate through the rows and check for the specified values
         for row in table_rows:
-            # Get the values from the table cells
             cells = row.find_elements(By.TAG_NAME, "td")
 
-            if len(cells) == 5:  # Assuming there are 5 cells in each row
+            if len(cells) == 6:
                 row_checkInDate = cells[0].text
                 row_checkOutDate = cells[1].text
-                row_roomType = cells[2].text
-                row_petName = cells[4].text  # Assuming pet name is in the 5th cell
+                row_roomType = cells[2].text.lower()
+                row_petName = cells[4].text
 
-                if (
-                        row_checkInDate == checkInDate
-                        and row_checkOutDate == checkOutDate
-                        and row_roomType == roomType
-                        and row_petName == petName
-                ):
+                if (row_checkInDate == checkInDate) and (row_checkOutDate == checkOutDate) and (row_roomType == roomType) and (row_petName == petName):
                     record_found = True
-                    break
+            else:
+                print("Não tem 6 colunas")
 
-        # Assert that the record is found
-        if record_found:
-            print("Test new lodging register succeeded.")
-        else:
-            print("Record not found in the table.")
-
+        assert record_found
+        print("Test new lodging register succeeded")
     except Exception as e:
         print("Test new lodging register failed:", str(e))
 
