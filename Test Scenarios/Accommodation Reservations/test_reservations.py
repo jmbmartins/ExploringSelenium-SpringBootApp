@@ -3,6 +3,7 @@ import time
 from datetime import datetime
 
 from selenium import webdriver
+from selenium.common import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
@@ -86,7 +87,8 @@ def make_reservation():
                 row_roomType = cells[2].text.lower()
                 row_petName = cells[4].text
 
-                if (row_checkInDate == checkInDate) and (row_checkOutDate == checkOutDate) and (row_roomType == roomType) and (row_petName == petName):
+                if (row_checkInDate == checkInDate) and (row_checkOutDate == checkOutDate) and (
+                        row_roomType == roomType) and (row_petName == petName):
                     record_found = True
             else:
                 print("Não tem 6 colunas")
@@ -98,7 +100,67 @@ def make_reservation():
 
 
 def delete_reservation():
-    pass
+    try:
+        # Login
+        driver.get('http://localhost:8080/')
+
+        email_input = driver.find_element(By.NAME, 'email')
+        password_input = driver.find_element(By.NAME, 'password')
+        login_button = driver.find_element(By.ID, 'btnSub')
+
+        email_input.send_keys('user1@example.com')
+        password_input.send_keys('password1')
+        login_button.click()
+
+        time.sleep(2)
+
+        driver.implicitly_wait(10)
+
+        # Home Page
+        btnBooking = driver.find_element(By.ID, 'btnbooking')
+        btnBooking.click()
+
+        # Booking page
+
+        # Define the criteria for the lodging you want to delete
+        checkInDate_to_delete = '2023-11-19'
+        checkOutDate_to_delete = '2023-11-29'
+        petName_to_delete = 'Thor'
+
+        # Find all 'tr' elements with the class "table_lod"
+        table_rows = driver.find_elements(By.CLASS_NAME, 'table_lod')
+
+        for row in table_rows:
+            # Find the 'td' elements within the current row
+            cells = row.find_elements(By.TAG_NAME, "td")
+
+            # Extract values from the columns
+            row_checkInDate = cells[0].text
+            row_checkOutDate = cells[1].text
+            row_petName = cells[4].text
+
+            # Check if the criteria match the values in the row
+            if (
+                    row_checkInDate == checkInDate_to_delete
+                    and row_checkOutDate == checkOutDate_to_delete
+                    and row_petName == petName_to_delete
+            ):
+                # Find and click the "Delete Reserve" link in the same row
+                delete_link = row.find_element(By.CLASS_NAME, 'delete-link')
+                delete_link.click()
+
+                try:
+                    # After deleting, check if the row still exists in the table
+                    driver.find_element(By.XPATH, ".//td[contains(text(), '{checkInDate_to_delete}')]")
+                    driver.find_element(By.XPATH, f".//td[contains(text(), '{checkOutDate_to_delete}')]")
+                    driver.find_element(By.XPATH, f".//td[contains(text(), '{petName_to_delete}')]")
+                    print("Entry still exists in the table (not deleted).")
+                except NoSuchElementException:
+                    print("Entry has been successfully deleted.")
+                break
+
+    except Exception as e:
+        print("Test delete a lodging register failed:", str(e))
 
 
 def checkIn_after_checkOut():
@@ -112,7 +174,7 @@ def checkIn_before_currentDate():
 # Main test scenario
 try:
     make_reservation()
-    # delete_reservation()
+    delete_reservation()
     # checkIn_after_checkOut()
     # checkIn_before_currentDate()
 except Exception as e:
