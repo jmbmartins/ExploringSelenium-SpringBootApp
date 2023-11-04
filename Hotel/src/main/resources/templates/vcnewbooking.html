@@ -69,10 +69,10 @@
     
   <form action="#" th:action="@{/vcsaveLodging}" th:object="${new_lodging}" method="POST">
     <label for="checkInDate">Check-In Date:</label>
-    <input type="date" th:field="*{checkInDate}" required>
+    <input class="checkInDate" type="date" th:field="*{checkInDate}" required>
     <br>
     <label for="checkOutDate">Check-Out Date:</label>
-    <input type="date" th:field="*{checkOutDate}" required>
+    <input class="checkOutDate" type="date" th:field="*{checkOutDate}" required>
     <br>
     <label for="petName">Pet Name:</label>
     <select id="petId" name="petId" th:field="*{pet.id}" required>

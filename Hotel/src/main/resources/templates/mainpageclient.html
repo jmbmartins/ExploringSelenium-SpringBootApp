@@ -171,7 +171,7 @@ form button[type="submit"]:hover {
   <div class="service-list">
     <h2>Our Services</h2>
     <ul>
-        <li class="service-item"><a th:href="@{/vcbooking}">Booking</a></li>
+        <li class="service-item"><a id = "btnbooking" th:href="@{/vcbooking}">Booking</a></li>
         <li class="service-item"><a th:href="@{/vcfeeding}">Feeding</a></li>
     </ul>
 </div>
@@ -213,7 +213,7 @@ form button[type="submit"]:hover {
     </div>
 
     <h2>Pet's list</h2>
-    <a class="reserve_link" th:href="@{/showVCNewPetForm}">Add Pet</a>
+    <a th:href="@{/showVCNewPetForm}">Add Pet</a>
     <div th:if="${pets != null}">
       <table>
           <tr>
