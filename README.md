@@ -38,8 +38,8 @@
 
 ## Teste de Alimentação  (Vasco)
 - Automatize testes para:
-  - Associação de tipos de alimentação a animais.
-  - Criação de reservas com base no tipo de alimentação desejado.
+  - Associação de tipos de alimentação a animais.✅
+  - Criação de reservas com base no tipo de alimentação desejado.✅
 
 ## Teste de Estatísticas e Relatórios (Rui)
 - Automatize testes para gerar estatísticas e relatórios com base nas operações realizadas na aplicação.
