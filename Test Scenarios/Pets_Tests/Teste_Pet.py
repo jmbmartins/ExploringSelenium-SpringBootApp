@@ -53,6 +53,7 @@ def Test_Create_Pet(driver):
         print("Status: Failed")
         print("Reason:", str(e))
         return False
+        
 def Test_Update_Pet(driver):
     try:
         driver.get('http://localhost:8080/mainpageclient')
@@ -68,7 +69,7 @@ def Test_Update_Pet(driver):
             botao.click()
             url=driver.current_url
             if('http://localhost:8080/mainpageclient' in url):
-                print("** Test: Delet Pet**")
+                print("** Test: Update Pet**")
                 print("Status: Passed ")
                 return True
             else:
@@ -84,6 +85,7 @@ def Test_Update_Pet(driver):
         print("Status: Failed")
         print("Reason:", str(e))
         return False
+
 def Test_Delete_Pet(driver):
     try:
         driver.get('http://localhost:8080/mainpageclient')
@@ -120,7 +122,10 @@ def main():
         else:
             print("Stopping Tests!")
         if(Pass):
-            Pass=Test_Create_Pet(driver)        
+            Pass=Test_Create_Pet(driver)
+        else:
+            print("Stopping Tests!")    
+            
     except Exception as e:
         print(f"An error occurred: {str(e)}")
     finally:
