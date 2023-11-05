@@ -119,7 +119,8 @@ def main():
             Pass=Test_Delete_Pet(driver)
         else:
             print("Stopping Tests!")
-            
+        if(Pass):
+            Pass=Test_Create_Pet(driver)        
     except Exception as e:
         print(f"An error occurred: {str(e)}")
     finally:
