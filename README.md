@@ -45,8 +45,6 @@ https://www.overleaf.com/2471912627fhdbwsbqtqxq#7f702a
   - Associação de tipos de alimentação a animais.✅
   - Criação de reservas com base no tipo de alimentação desejado.✅
 
-## Teste de Estatísticas e Relatórios (Rui)
-- Automatize testes para gerar estatísticas e relatórios com base nas operações realizadas na aplicação.
 
 ## Estrutura do Relatório
 
