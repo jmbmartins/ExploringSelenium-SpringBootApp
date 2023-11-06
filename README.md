@@ -30,9 +30,9 @@ https://www.overleaf.com/2471912627fhdbwsbqtqxq#7f702a
 
 ## Teste de Gerenciamento de Quartos (Rui)
 - Automatize testes para:
-  - Registro de informações de quartos.
-  - Verificação da disponibilidade de quartos.
+  - Registro de quartos.
   - Atualização de detalhes de quartos.
+  - Eliminar quarto.
 
 ## Teste de Reservas de Alojamento (João)
 - Automatize testes para:
