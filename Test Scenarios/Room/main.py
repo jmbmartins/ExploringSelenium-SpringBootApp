@@ -4,7 +4,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 
 
-# marcar uma data que já passou
 def Login_User(driver):
     try:
         driver.get('http://localhost:8080/login')
